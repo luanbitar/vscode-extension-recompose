@@ -1,8 +1,9 @@
 {
     "name": "recompose-snippets",
-    "displayName": "Recompose snippets",
+    "displayName": "Recompose Snippets",
     "description": "Extension to provide snippets to multiple logic layers with recompose",
-    "version": "0.0.4",
+    "version": "0.0.5",
+    "repository": "https://github.com/luanbitar/vscode-extension-recompose",
     "publisher": "lbitar",
     "icon": "logo.png",
     "engines": {
