@@ -1,4 +1,11 @@
 {
+  "log": {
+    "prefix": "lg",
+    "body": [
+      "console.log($CLIPBOARD)"
+    ],
+    "description": "Console log shorthand"
+  },
   "dumb": {
     "prefix": "dumb",
     "body": [
@@ -23,7 +30,7 @@
     ],
     "description": "Enhancer skeleton"
   },
-  "datacompose": {
+  "datarecompose": {
     "prefix": "datarecompose",
     "body": [
       "import { compose, setDisplayName } from 'recompose'",
@@ -40,6 +47,53 @@
       "\tconnect(mapStateToProps, mapDispatchToProps),",
       "\t$0",
       ")"
-    ]
+    ],
+    "description": "Recompose data layer"
+  },
+  "staterecompose": {
+    "prefix": "staterecompose",
+    "body": [
+      "import { compose, setDisplayName, withState } from 'recompose'",
+      "",
+      "export default compose(",
+      "\tsetDisplayName('/src/enhancers/${TM_FILEPATH/.*[\\/](.*[\\/].*)$$/$1/}'),",
+      "\twithState('$1', 'set$1', $2),",
+      "\t$0",
+      ")"
+    ],
+    "description": "Recompose state layer"
+  },
+  "wstaterecompose": {
+    "prefix": "wstaterecompose",
+    "body": [
+      "withState('$1', 'set$1', $2),",
+      "$0"
+    ],
+    "description": "withState shorthand"
+  },
+  "handlersrecompose": {
+    "prefix": "handlersrecompose",
+    "body": [
+      "import { compose, setDisplayName, withHandlers } from 'recompose'",
+      "",
+      "export default compose(",
+      "\tsetDisplayName('/src/enhancers/${TM_FILEPATH/.*[\\/](.*[\\/].*)$$/$1/}'),",
+      "\twithHandlers({",
+      "\t\ton$1: ({ $2 }) => ($3) => {",
+      "\t\t\t$0",
+      "\t\t},",
+      "\t})",
+      ")"
+    ],
+    "description": "Recompose handler layer"
+  },
+  "whandlerrecompose": {
+    "prefix": "whandlerrecompose",
+    "body": [
+      "on$1: ({ $2 }) => ($3) => {",
+      "\t$0",
+      "},"
+    ],
+    "description": "withHandler shorthand"
   }
 }

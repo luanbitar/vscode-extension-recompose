@@ -1,9 +1,7 @@
-# Change Log
+## [0.0.6]
 
-All notable changes to the "recompose-snippets" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- State and handler layers and shorthands. Including 'lg' to console.log shorthand
 
 ## [0.0.5]
 
-- Initial release
+- Added dumb components, index and data layers
