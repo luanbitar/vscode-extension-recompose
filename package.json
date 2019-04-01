@@ -1,0 +1,22 @@
+{
+    "name": "recompose-snippets",
+    "displayName": "recompose-snippets",
+    "description": "Extension to provide snippets to multiple logic layers with recompose",
+    "version": "0.0.4",
+    "publisher": "lbitar",
+    "icon": "logo.png",
+    "engines": {
+        "vscode": "^0.10.5"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

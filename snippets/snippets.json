@@ -1,0 +1,45 @@
+{
+  "dumb": {
+    "prefix": "dumb",
+    "body": [
+      "import React from 'react'",
+      "",
+      "const $TM_FILENAME_BASE = () =>",
+      "\t$1",
+      "",
+      "export default $TM_FILENAME_BASE"
+    ],
+    "description": "React dumb component"
+  },
+  "compose": {
+    "prefix": "compose",
+    "body": [
+      "import { compose, setDisplayName } from 'recompose'",
+      "",
+      "export default compose(",
+      "\tsetDisplayName('/src/enhancers/${TM_FILEPATH/.*[\\/](.*[\\/].*)$$/$1/}'),",
+      "\t$1",
+      ")"
+    ],
+    "description": "Enhancer skeleton"
+  },
+  "datacompose": {
+    "prefix": "datarecompose",
+    "body": [
+      "import { compose, setDisplayName } from 'recompose'",
+      "import { connect } from 'react-redux'",
+      "",
+      "const mapStateToProps = state => ({ $1: state.$1 })",
+      "",
+      "const mapDispatchToProps = dispatch => ({",
+      "\t$2: ($3) => dispatch($2($3))",
+      "})",
+      "",
+      "export default compose(",
+      "\tsetDisplayName('/src/enhancers/${TM_FILEPATH/.*[\\/](.*[\\/].*)$$/$1/}'),",
+      "\tconnect(mapStateToProps, mapDispatchToProps),",
+      "\t$0",
+      ")"
+    ]
+  }
+}
