@@ -1,6 +1,6 @@
 {
     "name": "recompose-snippets",
-    "displayName": "recompose-snippets",
+    "displayName": "Recompose snippets",
     "description": "Extension to provide snippets to multiple logic layers with recompose",
     "version": "0.0.4",
     "publisher": "lbitar",
