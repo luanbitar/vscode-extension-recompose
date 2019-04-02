@@ -1,5 +1,5 @@
 {
-  "log": {
+  "lg": {
     "prefix": "lg",
     "body": [
       "console.log($CLIPBOARD)"
@@ -95,5 +95,74 @@
       "},"
     ],
     "description": "withHandler shorthand"
+  },
+  "hooksrecompose": {
+    "prefix": "hooksrecompose",
+    "body": [
+      "import { compose, setDisplayName, lifecycle } from 'recompose'",
+      "",
+      "export default compose(",
+      "\tsetDisplayName('/src/enhancers/${TM_FILEPATH/.*[\\/](.*[\\/].*)$$/$1/}'),",
+      "\tlifecycle({",
+      "\t\t$0",
+      "\t})",
+      ")"
+    ],
+    "description": "Recompose hooks layer"
+  },
+  "componentDidMount": {
+    "prefix": "cdm",
+    "body": [
+      "componentDidMount() {",
+      "\t$0",
+      "},"
+    ],
+    "description": "componentDidMount"
+  },
+  "componentDidUpdate": {
+    "prefix": "cdu",
+    "body": [
+      "componentDidUpdate(prevProps, prevState) {",
+      "\t$0",
+      "},"
+    ],
+    "description": "componentDidUpdate"
+  },
+  "shouldComponentUpdate": {
+    "prefix": "scu",
+    "body": [
+      "shouldComponentUpdate(nextProps, nextState) {",
+      "\t$0",
+      "},"
+    ],
+    "description": "shouldComponentUpdate"
+  },
+  "componentWillUnmount": {
+    "prefix": "cwu",
+    "body": [
+      "componentWillUnmount() {",
+      "\t$0",
+      "},"
+    ],
+    "description": "componentWillUnmount"
+  },
+  "propsmapperrecompose": {
+    "prefix": "propsmapperrecompose",
+    "body": [
+      "import { compose, setDisplayName, mapProps } from 'recompose'",
+      "",
+      "export default compose(",
+      "\tsetDisplayName('/src/enhancers/${TM_FILEPATH/.*[\\/](.*[\\/].*)$$/$1/}'),",
+      "\tmapProps(({ $1, ...rest }) => {",
+      "\t\t$0",
+      "\t\t",
+      "\t\treturn {",
+      "\t\t\t",
+      "\t\t\t...rest",
+      "\t\t}",
+      "\t})",
+      ")"
+    ],
+    "description": "Recompose Props Mapper layer"
   }
 }

@@ -1,6 +1,6 @@
 ## [0.0.6]
 
-- State and handler layers and shorthands. Including 'lg' to console.log shorthand
+- State and handler layers and shorthands. Including 'lg' to console.log shorthand. Hooks layer with lyfecicles shorthands, like componentDidMound(). Props Mapper layer. Cool gif's on Readme ;D
 
 ## [0.0.5]
 
