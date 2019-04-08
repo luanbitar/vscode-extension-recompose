@@ -1,3 +1,7 @@
+[![Version of recompose-snippets vscode extension](https://img.shields.io/visual-studio-marketplace/v/lbitar.recompose-snippets.svg)](https://marketplace.visualstudio.com/itemdetails?itemName=lbitar.recompose-snippets)
+[![Downloads of recompose-snippets vscode extension](https://img.shields.io/visual-studio-marketplace/d/lbitar.recompose-snippets.svg)](https://marketplace.visualstudio.com/itemdetails?itemName=lbitar.recompose-snippets)
+
+
 Add this line in your settings.json to priority snippets autocomplete
 
 `"editor.snippetSuggestions": "top"`
@@ -12,7 +16,7 @@ Add this line in your settings.json to priority snippets autocomplete
 | staterecompose       | State layer           |
 | wstaterecompose      | State shorthand       |
 | handlersrecompose    | Handlers layer        |
-| whandlerrecompose    | Handler shorthand    |
+| whandlerrecompose    | Handler shorthand     |
 | hooksrecompose       | Hooks layer           |
 | cdm, cdu, scu, cwu   | Lifecycles shorthand  |
 | propsmapperrecompose | Props Mapper layer    |
