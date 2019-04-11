@@ -4,7 +4,7 @@
 
 Add this line in your settings.json to priority snippets autocomplete
 
-`"editor.snippetSuggestions": "top"`
+> `"editor.snippetSuggestions": "top"`
 
 ## Commands
 | Commands             | Description           |
@@ -48,5 +48,5 @@ Add this line in your settings.json to priority snippets autocomplete
 ![dumb components](gifs/propsMapper.gif)
 
 ### Supported extensions
-`(js, jsx, ts, tsx)`
+> `(js, jsx, ts, tsx)` 
 
