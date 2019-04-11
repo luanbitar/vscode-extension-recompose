@@ -1,3 +1,7 @@
+## [0.0.8]
+
+- Adding support to javascriptreact, typescript and typescriptreact
+- 
 ## [0.0.7]
 
 - Adding badges on README

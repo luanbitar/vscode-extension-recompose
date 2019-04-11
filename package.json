@@ -1,23 +1,35 @@
 {
-    "name": "recompose-snippets",
-    "displayName": "Recompose Snippets",
-    "description": "Extension to provide snippets to multiple logic layers with recompose",
-    "version": "0.0.7",
-    "repository": "https://github.com/luanbitar/vscode-extension-recompose",
-    "publisher": "lbitar",
-    "icon": "logo.png",
-    "engines": {
-        "vscode": "^0.10.5"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "javascript",
-                "path": "./snippets/snippets.json"
-            }
-        ]
-    }
+  "name": "recompose-snippets",
+  "displayName": "Recompose Snippets",
+  "description": "Extension to provide snippets to multiple logic layers with recompose",
+  "version": "0.0.7",
+  "repository": "https://github.com/luanbitar/vscode-extension-recompose",
+  "publisher": "lbitar",
+  "icon": "logo.png",
+  "engines": {
+    "vscode": "^0.10.5"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
 }

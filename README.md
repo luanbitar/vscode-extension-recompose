@@ -47,3 +47,6 @@ Add this line in your settings.json to priority snippets autocomplete
 ### propsmapperrecompose - Props Mapper layer
 ![dumb components](gifs/propsMapper.gif)
 
+### Supported extensions
+`(js, jsx, ts, tsx)`
+
