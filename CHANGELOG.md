@@ -1,3 +1,7 @@
+## [1.0.1]
+
+- Adding tags and categories
+  
 ## [1.0.0]
 
 - Adding support to javascriptreact, typescript and typescriptreact

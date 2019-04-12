@@ -2,7 +2,7 @@
   "name": "recompose-snippets",
   "displayName": "Recompose Snippets",
   "description": "Extension to provide snippets to multiple logic layers with recompose",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "https://github.com/luanbitar/vscode-extension-recompose",
   "publisher": "lbitar",
   "icon": "logo.png",
@@ -10,7 +10,35 @@
     "vscode": "^0.10.5"
   },
   "categories": [
-    "Snippets"
+    "Snippets",
+    "Other"
+  ],
+  "keywords": [
+    "react",
+    "reactjs",
+    "recompose",
+    "redux",
+    "react-native",
+    "javascript",
+    "javascriptreact",
+    "Javascript React",
+    "typescript",
+    "typescriptreact",
+    "Typescript React",
+    "js",
+    "jsx",
+    "ts",
+    "tsx",
+    "snippet",
+    "snippets",
+    "keybinding",
+    "es5",
+    "es6",
+    "es7",
+    "vscode",
+    "vscode-extension",
+    "node",
+    "nodejs"
   ],
   "contributes": {
     "snippets": [
