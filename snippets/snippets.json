@@ -5,18 +5,40 @@
       "console.log($CLIPBOARD)"
     ],
     "description": "Console log shorthand"
-  },
+	},
+	"imr": {
+		"prefix": "imr",
+		"body": [
+			"import React from 'react'",
+      ""
+		],
+		"description": "React default import"
+	},
   "dumb": {
     "prefix": "dumb",
     "body": [
-      "import React from 'react'",
-      "",
-      "const $TM_FILENAME_BASE = () =>",
-      "\t$0",
-      "",
+			"const ${TM_DIRECTORY/.*[\\/](.*)$$/$1/} = () => {",
+			"\t",
+			"\treturn (",
+			"\t\t$0",
+			"\t)",
+      "}",
+      "export default ${TM_DIRECTORY/.*[\\/](.*)$$/$1/}"
+    ],
+    "description": "React dumb component based on parent's folder"
+  },
+  "filedumb": {
+    "prefix": "filedumb",
+    "body": [
+			"const $TM_FILENAME_BASE = () => {",
+			"\t",
+			"\treturn (",
+			"\t\t$0",
+			"\t)",
+      "}",
       "export default $TM_FILENAME_BASE"
     ],
-    "description": "React dumb component"
+    "description": "React dumb component based on filename"
   },
   "compose": {
     "prefix": "compose",
