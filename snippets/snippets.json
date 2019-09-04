@@ -17,7 +17,7 @@
   "dumb": {
     "prefix": "dumb",
     "body": [
-			"const ${TM_DIRECTORY/.*[\\/](.*)$$/$1/} = () => {",
+			"function ${TM_DIRECTORY/.*[\\/](.*)$$/$1/}() {",
 			"\t",
 			"\treturn (",
 			"\t\t$0",
@@ -30,7 +30,7 @@
   "filedumb": {
     "prefix": "filedumb",
     "body": [
-			"const $TM_FILENAME_BASE = () => {",
+			"function $TM_FILENAME_BASE() {",
 			"\t",
 			"\treturn (",
 			"\t\t$0",
@@ -43,7 +43,8 @@
   "compose": {
     "prefix": "compose",
     "body": [
-      "import { compose, setDisplayName } from 'recompose'",
+      "import compose from 'recompose/compose'",
+      "import setDisplayName from 'recompose/setDisplayName'",
       "",
       "export default compose(",
       "\tsetDisplayName('/src/enhancers/${TM_FILEPATH/.*[\\/](.*[\\/].*)$$/$1/}'),",
@@ -55,7 +56,8 @@
   "datarecompose": {
     "prefix": "datarecompose",
     "body": [
-      "import { compose, setDisplayName } from 'recompose'",
+      "import compose from 'recompose/compose'",
+      "import setDisplayName from 'recompose/setDisplayName'",
       "import { connect } from 'react-redux'",
       "",
       "const mapStateToProps = state => ({ $1: state.$1 })",
@@ -75,7 +77,9 @@
   "staterecompose": {
     "prefix": "staterecompose",
     "body": [
-      "import { compose, setDisplayName, withState } from 'recompose'",
+			"import withState from 'recompose/withState'",
+      "import compose from 'recompose/compose'",
+      "import setDisplayName from 'recompose/setDisplayName'",
       "",
       "export default compose(",
       "\tsetDisplayName('/src/enhancers/${TM_FILEPATH/.*[\\/](.*[\\/].*)$$/$1/}'),",
@@ -96,7 +100,9 @@
   "handlersrecompose": {
     "prefix": "handlersrecompose",
     "body": [
-      "import { compose, setDisplayName, withHandlers } from 'recompose'",
+      "import compose from 'recompose/compose'",
+      "import setDisplayName from 'recompose/setDisplayName'",
+      "import withHandlers from 'recompose/withHandlers'",
       "",
       "export default compose(",
       "\tsetDisplayName('/src/enhancers/${TM_FILEPATH/.*[\\/](.*[\\/].*)$$/$1/}'),",
@@ -121,7 +127,9 @@
   "hooksrecompose": {
     "prefix": "hooksrecompose",
     "body": [
-      "import { compose, setDisplayName, lifecycle } from 'recompose'",
+      "import compose from 'recompose/compose'",
+      "import lifecycle from 'recompose/lifecycle'",
+      "import setDisplayName from 'recompose/setDisplayName'",
       "",
       "export default compose(",
       "\tsetDisplayName('/src/enhancers/${TM_FILEPATH/.*[\\/](.*[\\/].*)$$/$1/}'),",
@@ -171,7 +179,9 @@
   "propsmapperrecompose": {
     "prefix": "propsmapperrecompose",
     "body": [
-      "import { compose, setDisplayName, mapProps } from 'recompose'",
+      "import compose from 'recompose/compose'",
+      "import mapProps from 'recompose/mapProps'",
+      "import setDisplayName from 'recompose/setDisplayName'",
       "",
       "export default compose(",
       "\tsetDisplayName('/src/enhancers/${TM_FILEPATH/.*[\\/](.*[\\/].*)$$/$1/}'),",
