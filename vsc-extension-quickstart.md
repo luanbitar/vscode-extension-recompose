@@ -1,5 +1,15 @@
 # Welcome to your VS Code Extension
 
+## Configuring environment
+
+* Make sure you have `vsce` global installed
+* Login with `vsce login`
+
+## Publishing new version
+
+* Increase `version` on `package.json`
+* run `vsce publish`
+
 ## What's in the folder
 
 * This folder contains all of the files necessary for your extension.
