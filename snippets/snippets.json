@@ -1,42 +1,39 @@
 {
   "lg": {
     "prefix": "lg",
-    "body": [
-      "console.log($CLIPBOARD)"
-    ],
+    "body": ["console.log({ $CLIPBOARD })"],
     "description": "Console log shorthand"
-	},
-	"imr": {
-		"prefix": "imr",
-		"body": [
-			"import React from 'react'",
-      ""
-		],
-		"description": "React default import"
-	},
+  },
+  "imr": {
+    "prefix": "imr",
+    "body": ["import React from 'react'", ""],
+    "description": "React default import"
+  },
   "dumb": {
     "prefix": "dumb",
     "body": [
-			"function ${TM_DIRECTORY/.*[\\/](.*)$$/$1/}() {",
-			"\t",
-			"\treturn (",
-			"\t\t$0",
-			"\t)",
+      "function ${TM_DIRECTORY/.*[\\/](.*)$$/$1/}() {",
+      "\t",
+      "\treturn (",
+      "\t\t$0",
+      "\t)",
       "}",
-      "export default ${TM_DIRECTORY/.*[\\/](.*)$$/$1/}"
+      "export default ${TM_DIRECTORY/.*[\\/](.*)$$/$1/}",
+      ""
     ],
     "description": "React dumb component based on parent's folder"
   },
   "filedumb": {
     "prefix": "filedumb",
     "body": [
-			"function $TM_FILENAME_BASE() {",
-			"\t",
-			"\treturn (",
-			"\t\t$0",
-			"\t)",
+      "function $TM_FILENAME_BASE() {",
+      "\t",
+      "\treturn (",
+      "\t\t$0",
+      "\t)",
       "}",
-      "export default $TM_FILENAME_BASE"
+      "export default $TM_FILENAME_BASE",
+      ""
     ],
     "description": "React dumb component based on filename"
   },
@@ -49,7 +46,8 @@
       "export default compose(",
       "\tsetDisplayName('/src/enhancers/${TM_FILEPATH/.*[\\/](.*[\\/].*)$$/$1/}'),",
       "\t$0",
-      ")"
+      ")",
+      ""
     ],
     "description": "Enhancer skeleton"
   },
@@ -61,10 +59,10 @@
       "import { connect } from 'react-redux'",
       "",
       "const mapStateToProps = (state) => {",
-			"\treturn {",
-			"\t\t$1: state.$1",
-			"\t}",
-			"}",
+      "\treturn {",
+      "\t\t$1: state.$1",
+      "\t}",
+      "}",
       "",
       "const mapDispatchToProps = dispatch => ({",
       "\t$2: ($3) => dispatch($2($3))",
@@ -74,14 +72,15 @@
       "\tsetDisplayName('/src/enhancers/${TM_FILEPATH/.*[\\/](.*[\\/].*)$$/$1/}'),",
       "\tconnect(mapStateToProps, mapDispatchToProps),",
       "\t$0",
-      ")"
+      ")",
+      ""
     ],
     "description": "Recompose data layer"
   },
   "staterecompose": {
     "prefix": "staterecompose",
     "body": [
-			"import withState from 'recompose/withState'",
+      "import withState from 'recompose/withState'",
       "import compose from 'recompose/compose'",
       "import setDisplayName from 'recompose/setDisplayName'",
       "",
@@ -89,16 +88,14 @@
       "\tsetDisplayName('/src/enhancers/${TM_FILEPATH/.*[\\/](.*[\\/].*)$$/$1/}'),",
       "\twithState('$1', 'set$1', $2),",
       "\t$0",
-      ")"
+      ")",
+      ""
     ],
     "description": "Recompose state layer"
   },
   "wstaterecompose": {
     "prefix": "wstaterecompose",
-    "body": [
-      "withState('$1', 'set$1', $2),",
-      "$0"
-    ],
+    "body": ["withState('$1', 'set$1', $2),", "$0"],
     "description": "withState shorthand"
   },
   "handlersrecompose": {
@@ -115,17 +112,14 @@
       "\t\t\t$0",
       "\t\t},",
       "\t})",
-      ")"
+      ")",
+      ""
     ],
     "description": "Recompose handler layer"
   },
   "whandlerrecompose": {
     "prefix": "whandlerrecompose",
-    "body": [
-      "on$1: ({ $2 }) => ($3) => {",
-      "\t$0",
-      "},"
-    ],
+    "body": ["on$1: ({ $2 }) => ($3) => {", "\t$0", "},"],
     "description": "withHandler shorthand"
   },
   "hooksrecompose": {
@@ -140,44 +134,29 @@
       "\tlifecycle({",
       "\t\t$0",
       "\t})",
-      ")"
+      ")",
+      ""
     ],
     "description": "Recompose hooks layer"
   },
   "componentDidMount": {
     "prefix": "cdm",
-    "body": [
-      "componentDidMount() {",
-      "\t$0",
-      "},"
-    ],
+    "body": ["componentDidMount() {", "\t$0", "},"],
     "description": "componentDidMount"
   },
   "componentDidUpdate": {
     "prefix": "cdu",
-    "body": [
-      "componentDidUpdate(prevProps, prevState) {",
-      "\t$0",
-      "},"
-    ],
+    "body": ["componentDidUpdate(prevProps, prevState) {", "\t$0", "},"],
     "description": "componentDidUpdate"
   },
   "shouldComponentUpdate": {
     "prefix": "scu",
-    "body": [
-      "shouldComponentUpdate(nextProps, nextState) {",
-      "\t$0",
-      "},"
-    ],
+    "body": ["shouldComponentUpdate(nextProps, nextState) {", "\t$0", "},"],
     "description": "shouldComponentUpdate"
   },
   "componentWillUnmount": {
     "prefix": "cwu",
-    "body": [
-      "componentWillUnmount() {",
-      "\t$0",
-      "},"
-    ],
+    "body": ["componentWillUnmount() {", "\t$0", "},"],
     "description": "componentWillUnmount"
   },
   "propsmapperrecompose": {
@@ -197,7 +176,8 @@
       "\t\t\t...rest",
       "\t\t}",
       "\t})",
-      ")"
+      ")",
+      ""
     ],
     "description": "Recompose Props Mapper layer"
   }
