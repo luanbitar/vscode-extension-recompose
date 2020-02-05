@@ -1,6 +1,9 @@
+<p align="center">
+   <img width="180" src="https://raw.githubusercontent.com/luanbitar/vscode-extension-recompose/master/logo.png" />
+ </p>
+
 [![Version of recompose-snippets vscode extension](https://img.shields.io/visual-studio-marketplace/v/lbitar.recompose-snippets.svg)](https://marketplace.visualstudio.com/itemdetails?itemName=lbitar.recompose-snippets)
 [![Downloads of recompose-snippets vscode extension](https://img.shields.io/visual-studio-marketplace/d/lbitar.recompose-snippets.svg)](https://marketplace.visualstudio.com/itemdetails?itemName=lbitar.recompose-snippets)
-
 
 Add this line in your settings.json to priority snippets autocomplete
 
